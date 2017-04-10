@@ -1,0 +1,9 @@
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Release\netcoreapp1.1\SearchNews.deps.json
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Release\netcoreapp1.1\SearchNews.runtimeconfig.json
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Release\netcoreapp1.1\SearchNews.runtimeconfig.dev.json
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Release\netcoreapp1.1\SearchNews.dll
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Release\netcoreapp1.1\SearchNews.pdb
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Release\netcoreapp1.1\SearchNews.csprojResolveAssemblyReference.cache
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Release\netcoreapp1.1\SearchNews.AssemblyInfo.cs
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Release\netcoreapp1.1\SearchNews.dll
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Release\netcoreapp1.1\SearchNews.pdb

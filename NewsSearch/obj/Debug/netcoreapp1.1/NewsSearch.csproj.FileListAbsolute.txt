@@ -1,0 +1,9 @@
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Debug\netcoreapp1.1\NewsSearch.deps.json
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Debug\netcoreapp1.1\NewsSearch.runtimeconfig.json
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Debug\netcoreapp1.1\NewsSearch.runtimeconfig.dev.json
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Debug\netcoreapp1.1\NewsSearch.dll
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\bin\Debug\netcoreapp1.1\NewsSearch.pdb
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\NewsSearch.csprojResolveAssemblyReference.cache
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\NewsSearch.AssemblyInfo.cs
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\NewsSearch.dll
+D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\NewsSearch.pdb
