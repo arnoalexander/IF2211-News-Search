@@ -41,6 +41,20 @@ namespace SearchNews.Controllers
         {
             //Kurang panggil algoritma
             ViewData["Message"] = "Hasil Pencarian";
+            ViewData["Keyword"] = Request.Form["keyword"];
+            ViewData["Algorithm"] = Request.Form["algorithm"];
+            if (ViewData["Algorithm"].ToString().Equals("Boyer-Moore"))
+            {
+                //panggil Boyer-Moore
+            }
+            else if (ViewData["Algorithm"].ToString().Equals("KMP"))
+            {
+                //panggil KMP
+            }
+            else if (ViewData["Algorithm"].ToString().Equals("Regex"))
+            {
+                //panggil Regex
+            }
             return View();
         }
 
