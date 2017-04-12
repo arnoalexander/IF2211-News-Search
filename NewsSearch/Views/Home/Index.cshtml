@@ -112,15 +112,26 @@
 </div>
 -->
 
-
-<div id="searchForm">
-    <form asp-controller="Home" asp-action="Result" method="post">
-        <label for="keyword">Keyword</label>
-        <input type="text" name="keyword" /> <br />
-        <p>Algoritma</p>
-        <input type="radio" name="algorithm" value="Boyer-Moore" />Boyer-Moore<br />
-        <input type="radio" name="algorithm" value="KMP" />KMP<br />
-        <input type="radio" name="algorithm" value="Regex" checked/>Regex<br />
-        <button type="submit">Search</button>
-    </form>
-</div>
+<br />
+<form asp-controller="Home" asp-action="Result" method="post">
+    <div class="form-group-lg">
+        <input class="form-control-static form-wide-centered" type="text" name="keyword" placeholder="Keyword" />
+    </div>
+    <br />
+    <div class="btn-group-lg">
+        <label class="radio-inline">
+            <input id="radio" class="radio-inline" type="radio" name="algorithm" value="Regex" checked />Regex
+        </label> 
+        <label class="radio-inline">
+            <input class="radio" type="radio" name="algorithm" value="Boyer-Moore" />Boyer-Moore
+        </label>
+        <label class="radio-inline">
+            <input class="radio" type="radio" name="algorithm" value="KMP" />KMP
+        </label>
+        <br />
+    </div>
+    <br />
+    <div class="btn-group-lg">
+        <button class="btn" type="submit">Search</button>
+    </div>
+</form>

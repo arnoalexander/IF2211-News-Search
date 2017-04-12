@@ -35,3 +35,13 @@ textarea {
         display: none;
     }
 }
+
+form {
+    display: block;
+    text-align: center;
+}
+
+.form-wide-centered {
+    border-radius: 6px;
+    width: 100%;
+}
