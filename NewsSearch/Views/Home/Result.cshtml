@@ -5,5 +5,20 @@
 }
 <h2>@ViewData["Title"]</h2>
 
-<p>Ini hasil pencarian dengan keyword = <strong>@ViewData["Keyword"]</strong> dan algoritma = 
-    <strong>@ViewData["Algorithm"]</strong>. Belum ada hehe</p>
+<p>Hasil pencarian dengan keyword = <strong>@ViewData["Keyword"]</strong> dan algoritma = 
+    <strong>@ViewData["Algorithm"]</strong>.</p>
+
+@if (ViewData["Algorithm"].ToString().Equals("Regex"))
+{
+    var resultList = ViewData["Result"] as List<Dictionary<string, string>>;
+    <ol>
+        @foreach (var element in resultList)
+        {
+            <li>
+                <a href=@element["link"]><b>@element["title"]</b></a>
+                <br />
+                <p>@element["match"]</p>
+            </li>
+        }
+    </ol>
+}

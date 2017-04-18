@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SearchNews.Models;
+using System.Threading.Tasks;
 
 namespace SearchNews.Controllers
 {
@@ -37,9 +39,8 @@ namespace SearchNews.Controllers
         /**
          * Action untuk hasil pencarian.
          */
-        public IActionResult Result()
+        public async Task<IActionResult> Result()
         {
-            //Kurang panggil algoritma
             ViewData["Message"] = "Hasil Pencarian";
             ViewData["Keyword"] = Request.Form["keyword"];
             ViewData["Algorithm"] = Request.Form["algorithm"];
@@ -54,6 +55,9 @@ namespace SearchNews.Controllers
             else if (ViewData["Algorithm"].ToString().Equals("Regex"))
             {
                 //panggil Regex
+                RegexSearch regexSearch = new RegexSearch(ViewData["Keyword"].ToString());
+                await regexSearch.Search();
+                ViewData["Result"] = regexSearch.searchResult;
             }
             return View();
         }
