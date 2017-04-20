@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
@@ -111,14 +112,72 @@ namespace SearchNews.Models
         public async Task MatchInWebsite(Dictionary<string,string> xmlParseResult)
         {
             KeyValuePair<int, int> matchedStringIndex = MatchString(keyword, xmlParseResult[title]);
+            //keyword cocok dengan judul
             if (matchedStringIndex.Key != -1 && matchedStringIndex.Value != -1)
             {
                 xmlParseResult[match] = xmlParseResult[title];
                 searchResult.Add(xmlParseResult);
-            } else
+            }
+            //keyword tidak cocok dengan judul, cari di konten berita
+            else 
             {
                 HtmlWeb web = new HtmlWeb();
                 HtmlDocument document = await web.LoadFromWebAsync(xmlParseResult[link]);
+                string content = "";
+                //parsing berita detik
+                if (xmlParseResult[siteTitle]=="news.detik")
+                {
+                    content = document.GetElementbyId("detikdetailtext").InnerText;
+                    content = Regex.Replace(content, @"polong.create\(([\s\S]*?)\)", String.Empty);
+                }
+                //parsing berita tempo dan viva
+                else if (xmlParseResult[siteTitle] == "Tempo.co News Site" || xmlParseResult[siteTitle]== "VIVA.co.id")
+                {
+                    HtmlNode[] paragraphs = document.DocumentNode.Descendants().Where(n => n.Name == "p").ToArray();
+                    foreach (HtmlNode paragraph in paragraphs) {
+                        content = content + paragraph.InnerHtml;
+                    }
+                }
+                //parsing berita antara
+                else if (xmlParseResult[siteTitle]== "ANTARA News - Berita Terkini")
+                {
+                    content = document.GetElementbyId("content_news").InnerText;
+                }
+                content = Regex.Replace(content, @"<([\s\S]*?)>", String.Empty);
+                content = Regex.Replace(content, @"(\n)+", String.Empty);
+                content = Regex.Replace(content, @"\s{2,}", " ");
+                KeyValuePair<int, int> keywordLocation = MatchString(keyword, content);
+                if (keywordLocation.Key != -1 && keywordLocation.Value != -1)
+                {
+                    int begin = keywordLocation.Key;
+                    int end = keywordLocation.Value;
+                    while (begin >= 0)
+                    {
+                        if (content[begin] == '.')
+                        {
+                            begin++;
+                            break;
+                        }
+                        else
+                        {
+                            begin--;
+                        }
+                    }
+                    while (end < content.Length)
+                    {
+                        if (content[end] == '.')
+                        {
+                            end--;
+                            break;
+                        }
+                        else
+                        {
+                            end++;
+                        }
+                    }
+                    xmlParseResult[match] = content.Substring(begin, end - begin + 1);
+                    searchResult.Add(xmlParseResult);
+                }
             }
         }
 
@@ -127,7 +186,8 @@ namespace SearchNews.Models
         /*Mengembalikan (-1,-1) jika tidak cocok*/
         public KeyValuePair<int,int> MatchString(string substring, string longstring)
         {
-            Regex regex = new Regex(substring, RegexOptions.IgnoreCase|RegexOptions.IgnorePatternWhitespace);
+            substring.Replace(" ", @"\s+");
+            Regex regex = new Regex(substring, RegexOptions.IgnoreCase);
             Match match = regex.Match(longstring);
             if (match.Success)
             {
