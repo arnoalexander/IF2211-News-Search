@@ -7,3 +7,12 @@ D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\News
 D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.AssemblyInfo.cs
 D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.dll
 D:\STEI ITB\Kuliah Informatika\semester 4\IF2211 Strategi Algoritma\tubes 3\NewsSearch\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.pdb
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.deps.json
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.runtimeconfig.json
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.runtimeconfig.dev.json
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.dll
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.pdb
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.dll
+C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.pdb

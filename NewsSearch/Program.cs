@@ -14,7 +14,7 @@ namespace SearchNews
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
                 .Build();
-
+                
             host.Run();
         }
     }
