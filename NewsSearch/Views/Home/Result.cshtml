@@ -8,7 +8,7 @@
 <p>Hasil pencarian dengan keyword = <strong>@ViewData["Keyword"]</strong> dan algoritma = 
     <strong>@ViewData["Algorithm"]</strong>.</p>
 
-@if (ViewData["Algorithm"].ToString().Equals("Regex"))
+@if (ViewData["Algorithm"].ToString().Equals("Regex") || ViewData["Algorithm"].ToString().Equals("KMP"))
 {
     var resultList = ViewData["Result"] as List<Dictionary<string, string>>;
     <ol>
