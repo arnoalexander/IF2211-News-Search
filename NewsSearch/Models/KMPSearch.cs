@@ -16,7 +16,8 @@ namespace SearchNews.Models
     public class KMPSearch
     {
         /*Array dari rss yang digunakan*/
-        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom"};
+        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom", "http://tempo.co/rss/terkini",
+            "http://rss.vivanews.com/get/all", "http://www.antaranews.com/rss/terkini"};
 
         /*Judul website berita*/
         public static string siteTitle = "siteTitle";

@@ -21,6 +21,22 @@ public class KMP
         }
     }
 
+    private bool equals(char c1, char c2)
+    {
+        int temp = (int)'A' - (int)'a';
+        if (c1 >= 'A' && c1 <= 'Z' && c2 >= 'a' && c2 <= 'z')
+        {
+            return ((int)c1 - (int)c2 == temp);
+        }
+        else if (c2 >= 'A' && c2 <= 'Z' && c1 >= 'a' && c1 <= 'z')
+        {
+            return ((int)c2 - (int)c1 == temp);
+        }
+        else
+        {
+            return (c2 == c1);
+        }
+    }
     public void PreKMP()
     {
         int i;
@@ -32,7 +48,7 @@ public class KMP
         kmpNext[0] = -1;
         while (i < input.Length - 1)
         {
-            while (j > -1 && !(input[i] == input[j]) && j < input.Length)
+            while (j > -1 && !(equals(input[i],input[j])) && j < input.Length)
             {
                 j = kmpNext[j];
             }
@@ -40,7 +56,7 @@ public class KMP
             ++j;
             if (i < input.Length - 1)
             {
-                if (input[i] == input[j])
+                if (equals(input[i],input[j]))
                 {
                     kmpNext[i] = kmpNext[j];
                 }
@@ -80,7 +96,7 @@ public class KMP
         while (i < LengthT - LengthInput)
         {
             j = 0;
-            while (j < LengthInput && T[i + j] == input[j])
+            while (j < LengthInput && equals(T[i + j],input[j]))
             {
                 ++j;
             }
@@ -102,7 +118,6 @@ public class KMP
 
         if (exit)
         {
-            System.Diagnostics.Debug.WriteLine("ketemu di idx pertama yaitu: " + i);
             return i-1;
         }
         else
