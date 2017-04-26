@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -14,11 +13,10 @@ namespace SearchNews.Models
     /**
      * Pencarian dengan regex
      */
-    public class RegexSearch
+    public class KMPSearch
     {
         /*Array dari rss yang digunakan*/
-        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom"/*, "http://tempo.co/rss/terkini",
-            "http://rss.vivanews.com/get/all", "http://www.antaranews.com/rss/terkini"*/};
+        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom"};
 
         /*Judul website berita*/
         public static string siteTitle = "siteTitle";
@@ -34,10 +32,10 @@ namespace SearchNews.Models
         /*Keyword untuk pencarian*/
         public string keyword;
         /*List dari hasil. Setiap elemen memetakan nama atribut("link"|"isi"|"kalimat") ke nilai atribut yang bersangkutan*/
-        public List<Dictionary<string,string>> searchResult;
-        
+        public List<Dictionary<string, string>> searchResult;
+
         /*Konstruktor*/
-        public RegexSearch(string keyword)
+        public KMPSearch(string keyword)
         {
             this.keyword = keyword;
             searchResult = new List<Dictionary<string, string>>();
@@ -46,7 +44,7 @@ namespace SearchNews.Models
         /*Prosedur pembacaan dan pencarian dalam rss*/
         public async Task Search()
         {
-            System.Diagnostics.Debug.WriteLine("entering RegexSearch.search() with keyword = "+keyword);
+            System.Diagnostics.Debug.WriteLine("entering RegexSearch.search() with keyword = " + keyword);
             foreach (string rss in rssArray)
             {
                 var client = new HttpClient();
@@ -93,24 +91,26 @@ namespace SearchNews.Models
                             }
                         }
                         //debug hasil parsing xml
-                        System.Diagnostics.Debug.WriteLine("<ParseResult> "+readValue[title] + " - " + readValue[link]);
+                        System.Diagnostics.Debug.WriteLine("<ParseResult> " + readValue[title] + " - " + readValue[link]);
                         //panggil prosedur pencarian
                         try
                         {
                             await MatchInWebsite(readValue);
                             System.Diagnostics.Debug.WriteLine("<LoadResult> Loaded Successfully");
-                        } catch (Exception exc)
+                        }
+                        catch (Exception exc)
                         {
                             System.Diagnostics.Debug.WriteLine("<LoadResult> Not Loaded");
-                        }     
+                        }
                     }
                 }
             }
         }
 
         /*Prosedur pencarian dalam website*/
-        public async Task MatchInWebsite(Dictionary<string,string> xmlParseResult)
+        public async Task MatchInWebsite(Dictionary<string, string> xmlParseResult)
         {
+            System.Diagnostics.Debug.WriteLine("Tampol bego, ntar kebiasaan\n");
             KeyValuePair<int, int> matchedStringIndex = MatchString(keyword, xmlParseResult[title]);
             //keyword cocok dengan judul
             if (matchedStringIndex.Key != -1 && matchedStringIndex.Value != -1)
@@ -119,27 +119,28 @@ namespace SearchNews.Models
                 searchResult.Add(xmlParseResult);
             }
             //keyword tidak cocok dengan judul, cari di konten berita
-            else 
+            else
             {
                 HtmlWeb web = new HtmlWeb();
                 HtmlDocument document = await web.LoadFromWebAsync(xmlParseResult[link]);
                 string content = "";
                 //parsing berita detik
-                if (xmlParseResult[siteTitle]=="news.detik")
+                if (xmlParseResult[siteTitle] == "news.detik")
                 {
                     content = document.GetElementbyId("detikdetailtext").InnerText;
                     content = Regex.Replace(content, @"polong.create\(([\s\S]*?)\)", String.Empty);
                 }
                 //parsing berita tempo dan viva
-                else if (xmlParseResult[siteTitle] == "Tempo.co News Site" || xmlParseResult[siteTitle]== "VIVA.co.id")
+                else if (xmlParseResult[siteTitle] == "Tempo.co News Site" || xmlParseResult[siteTitle] == "VIVA.co.id")
                 {
                     HtmlNode[] paragraphs = document.DocumentNode.Descendants().Where(n => n.Name == "p").ToArray();
-                    foreach (HtmlNode paragraph in paragraphs) {
+                    foreach (HtmlNode paragraph in paragraphs)
+                    {
                         content = content + paragraph.InnerHtml;
                     }
                 }
                 //parsing berita antara
-                else if (xmlParseResult[siteTitle]== "ANTARA News - Berita Terkini")
+                else if (xmlParseResult[siteTitle] == "ANTARA News - Berita Terkini")
                 {
                     content = document.GetElementbyId("content_news").InnerText;
                 }
@@ -184,14 +185,14 @@ namespace SearchNews.Models
         /*String matching dengan algoritma pilihan*/
         /*Mengembalikan nilai berupa indeks pertama dan terakhir tempat substring ditemukan pada longstring*/
         /*Mengembalikan (-1,-1) jika tidak cocok*/
-        public KeyValuePair<int,int> MatchString(string substring, string longstring)
+        public KeyValuePair<int, int> MatchString(string substring, string longstring)
         {
-            substring.Replace(" ", @"\s+");
-            Regex regex = new Regex(substring, RegexOptions.IgnoreCase);
-            Match match = regex.Match(longstring);
-            if (match.Success)
+            KMP kmp = new KMP(substring);
+            System.Diagnostics.Debug.WriteLine(kmp.GetString());
+            int match = kmp.SearchByKMP(longstring);
+            if (match != -1)
             {
-                return new KeyValuePair<int, int>(match.Index, match.Index+match.Length-1);
+                return new KeyValuePair<int, int>(match, match + substring.Length - 1);
             }
             else
             {

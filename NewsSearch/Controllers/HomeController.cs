@@ -51,6 +51,9 @@ namespace SearchNews.Controllers
             else if (ViewData["Algorithm"].ToString().Equals("KMP"))
             {
                 //panggil KMP
+                KMPSearch kmpSearch = new KMPSearch(ViewData["Keyword"].ToString());
+                await kmpSearch.Search();
+                ViewData["Result"] = kmpSearch.searchResult;
             }
             else if (ViewData["Algorithm"].ToString().Equals("Regex"))
             {
