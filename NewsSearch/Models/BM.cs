@@ -52,9 +52,10 @@ namespace SearchNews.Models
             while (i <= (T.Length - input.Length))
             {
                 int j = input.Length - 1;
-                while (j >= 0 && input[j] == T[i + j])
+                while (j >= 0 && equals(input[j], T[i + j]))
                 {
-                    j--;
+                    System.Diagnostics.Debug.WriteLine(input[j] + " " + T[i + j] + " " + equals(input[j], T[i + j]));
+                   j--;
                 }
                 if (j < 0)
                 {
