@@ -17,8 +17,8 @@ namespace SearchNews.Models
     public class RegexSearch
     {
         /*Array dari rss yang digunakan*/
-        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom"/*, "http://tempo.co/rss/terkini",
-            "http://rss.vivanews.com/get/all", "http://www.antaranews.com/rss/terkini"*/};
+        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom", "http://tempo.co/rss/terkini",
+            "http://rss.vivanews.com/get/all", "http://www.antaranews.com/rss/terkini"};
 
         /*Judul website berita*/
         public static string siteTitle = "siteTitle";
@@ -186,7 +186,7 @@ namespace SearchNews.Models
         /*Mengembalikan (-1,-1) jika tidak cocok*/
         public KeyValuePair<int,int> MatchString(string substring, string longstring)
         {
-            substring.Replace(" ", @"\s+");
+            substring = Regex.Replace(substring,@"\s+", @"[\s\d\w]*");
             Regex regex = new Regex(substring, RegexOptions.IgnoreCase);
             Match match = regex.Match(longstring);
             if (match.Success)
