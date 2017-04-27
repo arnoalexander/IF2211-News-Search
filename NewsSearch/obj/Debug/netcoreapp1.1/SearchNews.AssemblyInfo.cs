@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("SearchNews")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

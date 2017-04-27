@@ -47,6 +47,9 @@ namespace SearchNews.Controllers
             if (ViewData["Algorithm"].ToString().Equals("Boyer-Moore"))
             {
                 //panggil Boyer-Moore
+                BMSearch bmSearch = new BMSearch(ViewData["Keyword"].ToString());
+                await bmSearch.Search();
+                ViewData["Result"] = bmSearch.searchResult;
             }
             else if (ViewData["Algorithm"].ToString().Equals("KMP"))
             {

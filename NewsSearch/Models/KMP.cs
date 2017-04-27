@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-public class KMP
+﻿public class KMP
 {
     private string input;
     private int[] kmpNext;

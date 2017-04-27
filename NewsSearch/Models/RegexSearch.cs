@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -17,8 +16,8 @@ namespace SearchNews.Models
     public class RegexSearch
     {
         /*Array dari rss yang digunakan*/
-        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom"/*, "http://tempo.co/rss/terkini",
-            "http://rss.vivanews.com/get/all", "http://www.antaranews.com/rss/terkini"*/};
+        private static string[] rssArray = {"http://rss.detik.com/index.php/detikcom", "http://tempo.co/rss/terkini",
+            "http://rss.vivanews.com/get/all", "http://www.antaranews.com/rss/terkini"};
 
         /*Judul website berita*/
         public static string siteTitle = "siteTitle";
