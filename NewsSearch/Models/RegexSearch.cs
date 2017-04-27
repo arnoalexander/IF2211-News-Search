@@ -185,7 +185,7 @@ namespace SearchNews.Models
         /*Mengembalikan (-1,-1) jika tidak cocok*/
         public KeyValuePair<int,int> MatchString(string substring, string longstring)
         {
-            substring.Replace(" ", @"\s+");
+            substring = Regex.Replace(substring,@"\s+", @"[\s\d\w]*");
             Regex regex = new Regex(substring, RegexOptions.IgnoreCase);
             Match match = regex.Match(longstring);
             if (match.Success)
