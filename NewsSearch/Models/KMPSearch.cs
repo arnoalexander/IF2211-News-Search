@@ -45,7 +45,7 @@ namespace SearchNews.Models
         /*Prosedur pembacaan dan pencarian dalam rss*/
         public async Task Search()
         {
-            System.Diagnostics.Debug.WriteLine("entering RegexSearch.search() with keyword = " + keyword);
+            System.Diagnostics.Debug.WriteLine("entering KMPSearch.search() with keyword = " + keyword);
             foreach (string rss in rssArray)
             {
                 var client = new HttpClient();
@@ -111,7 +111,6 @@ namespace SearchNews.Models
         /*Prosedur pencarian dalam website*/
         public async Task MatchInWebsite(Dictionary<string, string> xmlParseResult)
         {
-            System.Diagnostics.Debug.WriteLine("Tampol bego, ntar kebiasaan\n");
             KeyValuePair<int, int> matchedStringIndex = MatchString(keyword, xmlParseResult[title]);
             //keyword cocok dengan judul
             if (matchedStringIndex.Key != -1 && matchedStringIndex.Value != -1)
@@ -189,7 +188,6 @@ namespace SearchNews.Models
         public KeyValuePair<int, int> MatchString(string substring, string longstring)
         {
             KMP kmp = new KMP(substring);
-            System.Diagnostics.Debug.WriteLine(kmp.GetString());
             int match = kmp.SearchByKMP(longstring);
             if (match != -1)
             {

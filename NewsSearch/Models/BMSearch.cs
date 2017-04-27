@@ -45,7 +45,7 @@ namespace SearchNews.Models
         /*Prosedur pembacaan dan pencarian dalam rss*/
         public async Task Search()
         {
-            System.Diagnostics.Debug.WriteLine("entering RegexSearch.search() with keyword = "+keyword);
+            System.Diagnostics.Debug.WriteLine("entering BMSearch.search() with keyword = "+keyword);
             foreach (string rss in rssArray)
             {
                 var client = new HttpClient();
@@ -186,7 +186,6 @@ namespace SearchNews.Models
         public KeyValuePair<int, int> MatchString(string substring, string longstring)
         {
             BM bm = new BM(substring);
-            System.Diagnostics.Debug.WriteLine(bm.GetString());
             int match = bm.SearchByBM(longstring);
             if (match != -1)
             {

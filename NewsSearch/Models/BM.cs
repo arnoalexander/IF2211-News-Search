@@ -54,7 +54,6 @@ namespace SearchNews.Models
                 int j = input.Length - 1;
                 while (j >= 0 && equals(input[j], T[i + j]))
                 {
-                    System.Diagnostics.Debug.WriteLine(input[j] + " " + T[i + j] + " " + equals(input[j], T[i + j]));
                    j--;
                 }
                 if (j < 0)
