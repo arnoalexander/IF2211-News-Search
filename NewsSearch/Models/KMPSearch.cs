@@ -99,7 +99,7 @@ namespace SearchNews.Models
                             await MatchInWebsite(readValue);
                             System.Diagnostics.Debug.WriteLine("<LoadResult> Loaded Successfully");
                         }
-                        catch (Exception exc)
+                        catch
                         {
                             System.Diagnostics.Debug.WriteLine("<LoadResult> Not Loaded");
                         }

@@ -16,3 +16,12 @@ C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strate
 C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.AssemblyInfo.cs
 C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.dll
 C:\Users\Lenovo\Desktop\TIME WAR!\STIMA WAR\TUBES 3 STIMA FINAL!!!\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.pdb
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.deps.json
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.runtimeconfig.json
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.runtimeconfig.dev.json
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.dll
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\bin\Debug\netcoreapp1.1\SearchNews.pdb
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.csprojResolveAssemblyReference.cache
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.AssemblyInfo.cs
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.dll
+D:\Institut Teknologi Bandung\Kuliah\Semester 4\Strategi Algoritma\[2016-04-06] Tugas Kecil III\src\IF2211_Strategi-Algoritma_News-Search\NewsSearch\obj\Debug\netcoreapp1.1\SearchNews.pdb

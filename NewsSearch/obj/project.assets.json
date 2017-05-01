@@ -10800,15 +10800,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\TIME WAR!\\STIMA WAR\\TUBES 3 STIMA FINAL!!!\\IF2211_Strategi-Algoritma_News-Search\\NewsSearch\\SearchNews.csproj",
+      "projectUniqueName": "D:\\Institut Teknologi Bandung\\Kuliah\\Semester 4\\Strategi Algoritma\\[2016-04-06] Tugas Kecil III\\src\\IF2211_Strategi-Algoritma_News-Search\\NewsSearch\\SearchNews.csproj",
       "projectName": "SearchNews",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\TIME WAR!\\STIMA WAR\\TUBES 3 STIMA FINAL!!!\\IF2211_Strategi-Algoritma_News-Search\\NewsSearch\\SearchNews.csproj",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\TIME WAR!\\STIMA WAR\\TUBES 3 STIMA FINAL!!!\\IF2211_Strategi-Algoritma_News-Search\\NewsSearch\\obj\\",
+      "projectPath": "D:\\Institut Teknologi Bandung\\Kuliah\\Semester 4\\Strategi Algoritma\\[2016-04-06] Tugas Kecil III\\src\\IF2211_Strategi-Algoritma_News-Search\\NewsSearch\\SearchNews.csproj",
+      "outputPath": "D:\\Institut Teknologi Bandung\\Kuliah\\Semester 4\\Strategi Algoritma\\[2016-04-06] Tugas Kecil III\\src\\IF2211_Strategi-Algoritma_News-Search\\NewsSearch\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
